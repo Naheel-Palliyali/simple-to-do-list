@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo list</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="card-container">
+        <div class="title-day"><h1><%= listDay %></h1></div>
+        <div class="list-items">
+            
+            <ul>
+                <% for (var i = 0; i < listItems.length; i++) { %>
+                    <li><%= listItems[i] %></li>
+                <% } %>
+            </ul>
+
+            <form action="/" method="POST">
+                <input type="text" name="item" placeholder="Enter item" onload="focusInput()">
+                <button type="submit">Add</button>
+            </form>
+        </div>
+
+        
+    </div>
+</body>
+</html>
