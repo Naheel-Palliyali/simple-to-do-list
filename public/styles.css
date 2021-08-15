@@ -1,4 +1,5 @@
 body {
+  background-color: rgb(40, 40, 40);
   font-size: 16px;
   margin: 0;
 }
@@ -8,6 +9,7 @@ h1 {
 }
 
 .card-container {
+  box-shadow: rgb(35, 35, 35) 0 0 32px 0;
   position: relative;
   top: 100px;
   padding-bottom: 24px;
@@ -15,22 +17,24 @@ h1 {
   text-align: left;
   width: 380px;
   border-radius: 12px;
-  border: solid rgb(0, 176, 171);
+  border-bottom-color: turquoise;
+  background-color: rgb(52, 52, 52);
+  color: white;
   overflow: hidden;
 }
 .title-day {
   margin: 0;
   padding: 12px;
   padding-left: 24px;
-  color: teal;
-  font-size: 0.8rem;
+  color: white;
+  font-size: 0.7rem;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: turquoise;
+  background-color: rgb(0, 171, 171);
 }
 
 .list-items {
   padding-left: 24px;
-  color: rgb(16, 54, 54);
+  color: rgb(222, 222, 222);
   font-size: 1rem;
   font-family: monospace;
   text-align: left;
@@ -38,6 +42,40 @@ h1 {
 
 ul {
   text-align: left;
-  list-style-type: none;
+  list-style-type: symbols();
   padding: 0;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+input {
+  width: 54%;
+  border-color: rgb(90, 90, 90);
+  color: white;
+  border-bottom-color: turquoise;
+  border-bottom-width: 4px;
+  border-style: solid;
+  background-color: rgb(40, 40, 40);
+  border-radius: 4px;
+  padding: 8px 24px;
+}
+
+input:focus {
+  outline: none;
+  border-bottom-color: turquoise;
+  border-bottom-width: 4px;
+  border-style: solid;
+}
+
+button {
+  background-color: rgb(0, 171, 171);
+  color: aliceblue;
+  padding: 8px 24px;
+  border-color: rgb(0, 171, 171);
+  border-style: solid;
+  border-radius: 8px;
+}
+
+button:hover {
+  background-color: rgb(0, 182, 182);
 }
