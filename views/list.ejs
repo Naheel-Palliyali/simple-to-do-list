@@ -1,17 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ToDo list</title>
 
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+<%- include("header"); %>
 
     <div class="card-container">
-        <div class="title-day"><h1><%= listDay %></h1></div>
+        <div class="title-day"><h1><%= listName %></h1></div>
         <div class="list-items">
             
             <ul>
@@ -22,11 +13,11 @@
 
             <form action="/" method="POST">
                 <input type="text" name="item" placeholder="Enter item" autocomplete="off" focus="off">
-                <button type="submit">Add</button>
+                <button type="submit" name="list" value="<%= listName %>">Add</button>
             </form>
         </div>
 
         
     </div>
-</body>
-</html>
+
+    <%- include("footer"); %>
