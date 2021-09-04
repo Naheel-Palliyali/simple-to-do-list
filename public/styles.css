@@ -18,7 +18,7 @@ h1 {
   margin: auto;
   text-align: left;
   width: 380px;
-  border-radius: 12px;
+  border-radius: 8px;
   border-bottom-color: turquoise;
   background-color: rgb(52, 52, 52);
   color: white;
@@ -44,13 +44,20 @@ h1 {
 
 ul {
   text-align: left;
-  list-style-type: symbols();
+  list-style-type: none;
   padding: 0;
-  padding-left: 24px;
   padding-right: 24px;
 }
 
-input {
+.checkbox {
+  display: inline-block;
+}
+
+.item {
+  display: inline-block;
+}
+
+input.enterItem {
   width: 54%;
   border-color: rgb(90, 90, 90);
   color: white;
