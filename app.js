@@ -73,7 +73,7 @@ app.get("/", function(req, res) {
 // Custom list using route name
 app.get("/lists/:listTitle", function(req, res) {
 
-    const listTitle = _.capitalize(req.params.listTitle);
+    const listTitle = _.capitalize(req.params.listTitle); 
     
     List.findOne({name: listTitle}, function(err, results){
         if (!err) {
@@ -114,15 +114,17 @@ app.post("/", function(req, res){
         name: newItem
     });
     
-    if (listName === "Today"){
+    if (listName === date.getDay()){
     
         item.save();
         res.redirect("/");
     } else {
         List.findOne({name: listName}, function(err, foundList){
-            foundList.items.push(item);
-            foundList.save();
-            res.redirect("/lists/" + listName);
+           if(!err) {
+               foundList.items.push(item);
+               foundList.save();
+               res.redirect("/lists/" + listName);
+           }
         });
     }
 });
