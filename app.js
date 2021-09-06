@@ -13,7 +13,7 @@ app.use(express.static("public"));
 
 app.set("view engine", "ejs");
 
-mongoose.connect("mongodb://localhost:27017/todolistDB", {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect("mongodb+srv://admin-naheel:test123@cluster0.hsapn.mongodb.net/toDoListDB?retryWrites=true&w=majority", {useNewUrlParser: true, useUnifiedTopology: true});
 
 // itemsSchema
 const itemsSchema = {
